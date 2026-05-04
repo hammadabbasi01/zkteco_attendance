@@ -147,7 +147,13 @@ app_license = "mit"
 
 # Scheduled Tasks
 # ---------------
-
+scheduler_events = {
+    "cron": {
+        "*/5 * * * *": [
+            "zkteco_attendance.zkteco_fetch_edit.fetch_zkteco_attendance"
+        ]
+    }
+}
 # scheduler_events = {
 # 	"all": [
 # 		"zkteco_attendance.tasks.all"
